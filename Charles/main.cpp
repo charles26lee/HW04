@@ -1,12 +1,6 @@
 /*
 Compiled via command line using:
 	g++ main.cpp -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -o main
-	
-Future improvements:
-	Replace bullet frequency (int) and followPath (function) with index for two vectors (shot pattern and followPath)
-		Add shot pattern functions and additional followPath functions
-		Shot pattern functions take the ff parameters: xPos, yPos or xVel, yVel
-		Shot pattern functions will change the bullets velocity depending to the length of time it's existed
 */
 
 //Using SDL, SDL_image, SDL_ttf, standard IO, strings, and string streams
@@ -862,7 +856,7 @@ bool init(){
 		}
 		
 		//Create window
-		gWindow = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+		gWindow = SDL_CreateWindow("Bullet Hell", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 		if(gWindow == NULL){
 			printf("Window could not be created! SDL Error: %s\n", SDL_GetError());
 			success = false;
